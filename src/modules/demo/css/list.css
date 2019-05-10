@@ -1,0 +1,64 @@
+:root {
+  --flexCenter: {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  --flexJustify: {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  --flexColumn {
+    flex-direction: column
+  }
+}
+/* 可以设置不同的进入和离开动画 */
+/* 设置持续时间和动画函数 */
+.slide-fade-enter-active, .slide-right-enter-active{
+  transition: all .3s ease;
+}
+/* .slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+} */
+.slide-fade-enter {
+  transform: translateX(7.5rem);
+  opacity: 0;
+}
+.slide-right-enter {
+  transform: translateX(-7.5rem);
+  opacity: 0;
+}
+/* list_box */
+#list_box {
+  & .list {
+    display: block;
+    width: 100%;
+    background: #fff;
+    & .item {
+      width: 6.9rem;
+      @apply --flexJustify;
+      font-size: 0.28rem;
+      line-height: 0.4rem;
+      color: #262626;
+      padding: 0.24rem 0;
+      border-bottom: 0.01rem solid #eaeaea;
+      background: #fff;
+      margin: 0 auto;
+      & img {
+        font-size: 0;
+        width: 0.42rem;
+        height: 0.42rem;
+      }
+      & b {
+        color: #c60a00;
+      }
+    }
+  }
+}
+.nodata {
+  font-size: 0.26rem;
+  text-align: center;
+  padding-top: 3rem;
+  color: #999;
+}
