@@ -12,24 +12,23 @@ module.exports = function(env){
 
   //var WebpackMd5Hash = require('webpack-md5-hash');
 
-  //各文件夹的路径
   var ROOT_PATH = path.resolve(__dirname);
-  var SRC_PATH = path.resolve(ROOT_PATH, 'src/modules/'); //源码目录
-  var DIST_PATH = path.resolve(ROOT_PATH, 'app'); //生产环境目录打包目录
-  var VIEWS_PATH = path.resolve(ROOT_PATH, 'src/views/'); //模板目录
-  var NODE_MODULES = path.resolve(ROOT_PATH, 'node_modules'); //npm包目录
+  var SRC_PATH = path.resolve(ROOT_PATH, 'src/modules/');
+  var DIST_PATH = path.resolve(ROOT_PATH, 'app');
+  var VIEWS_PATH = path.resolve(ROOT_PATH, 'src/views/');
+  var NODE_MODULES = path.resolve(ROOT_PATH, 'node_modules');
 
   //获取构建环境
   var NODE_ENV = process.env.NODE_ENV?process.env.NODE_ENV:env;
-  var isProduction = NODE_ENV ==='production' ? true : false; //生成环境
-  var isTest = NODE_ENV ==='testing' ? true : false; //测试环境
+  var isProduction = NODE_ENV ==='production' ? true : false;
+  var isTest = NODE_ENV ==='testing' ? true : false;
 
-  var entryTpl = {}; //存放模板对象 用于跟入口js对应
-  var plugins = []; //存放动态生成的插件数组
+  var entryTpl = {};
+  var plugins = [];
 
-  //入口html
+
   var entryHtml = glob.sync(VIEWS_PATH + '/**/*.html');
-  //var entryHtmlArr=[];
+
   entryHtml.forEach(function(filePath){
       var entryPath = path.dirname(filePath);
           entryPath = entryPath.substring(entryPath.lastIndexOf('\/')+1);
@@ -44,7 +43,7 @@ module.exports = function(env){
       entryTpl[filename] = filePath;
   });
 
-  //入口js
+
   var entryFiles = glob.sync(SRC_PATH + '/**/*.{js,vue}');
   var entryJs = {};
   entryFiles.forEach(function(filePath){
@@ -58,7 +57,7 @@ module.exports = function(env){
 
   var extractCSS;
   if(isProduction || isTest){
-      extractCSS = new ExtractTextPlugin('[name]/[name].[contenthash:20].css'); // contenthash 给css文件生成独立的hash值（与对应的js文件区分开）
+      extractCSS = new ExtractTextPlugin('[name]/[name].[contenthash:20].css');
        plugins.push(extractCSS,
           new UglifyJSPlugin({
               compress: {
@@ -71,9 +70,9 @@ module.exports = function(env){
                   NODE_ENV: JSON.stringify(process.env.NODE_ENV)
               }
           }),
-          new OptimizeCSSPlugin(), //压缩提取出的css，并解决ExtractTextPlugin分离出的js重复问题(多个文件引入同一css文件)
+          new OptimizeCSSPlugin(),
           new webpack.optimize.OccurrenceOrderPlugin(),
-          new webpack.NoEmitOnErrorsPlugin() //不触发错误,即编译后运行的包正常运行
+          new webpack.NoEmitOnErrorsPlugin()
           //new WebpackMd5Hash() // 解决只修改css文件时 导致引用该文件的js重复生成新hash值的问题（正常不需要）， 参考文献 http://www.cnblogs.com/ihardcoder/p/5623411.html
       );
 
@@ -88,7 +87,7 @@ module.exports = function(env){
   }
 
   return {
-    entry: Object.assign(entryJs,{ //生成公共主库文件根据项目的基础框架选择合并提取
+    entry: Object.assign(entryJs,{
       'vender': ['vue','vuex','vue-router'],
       'babel-polyfill':'babel-polyfill'
     }),
@@ -128,9 +127,9 @@ module.exports = function(env){
                                 plugins:[
                                     require('postcss-import')(),
                                     require('postcss-url')(),
-                                    require('postcss-cssnext')({ // 可使用css 最新的语法功能
+                                    require('postcss-cssnext')({
                                         features:{
-                                            rem:false  //这里设置false 关闭 px 和 rem转换
+                                            rem:false
                                         }
                                     })
                                 ]
@@ -189,16 +188,7 @@ module.exports = function(env){
               colors: true
           },
           proxy: {
-            '/api-help': {
-              target: 'https://neibum.kongfz.com/',
-              secure: true,
-              changeOrigin: true
-            },
-            '/': {
-              target: 'http://pmgs.kongfz.com/',
-              secure: true,
-              changeOrigin: true
-            }
+
           }
       }
   }

@@ -1,0 +1,20 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 7.5rem;
+  height: 0.8rem;
+  z-index: 10;
+  background: #07bed1;
+  & .title {
+    height: 0.8rem;
+    width: 4.7rem;
+    margin: 0 auto;
+    line-height: 0.8rem;
+    font-size: 0.38rem;
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
