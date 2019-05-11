@@ -1,0 +1,198 @@
+:root {
+  --flexCenter: {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  --flexJustify: {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  --flexLeft: {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  --flexColumn {
+    flex-direction: column
+  }
+  --flexCenterTopLeft: {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  --flexJustifyTop: {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+/* auction */
+.auction {
+  width: 100%;
+  background: url('../images/bg.png') no-repeat 0 0;
+  background-size: 100% auto;
+  & .banner {
+    width: 100%;
+    font-size: 0;
+    text-align: center;
+    padding-top: 1.1rem;
+    & img {
+      display: inline-block;
+      width: 2.4rem;
+      height: 1rem;
+    }
+    & .title {
+      width: 5.75rem;
+      font-size: 0.44rem;
+      padding-top: 0.40rem;
+      background: linear-gradient(to right, #C8A175 0%, #F8DDC1 48%, #C69F72 100%);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+      margin: 0 auto;
+    }
+  }
+  & .info_box {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 0.40rem 0.40rem 0 0;
+    margin-top: 0.3rem;
+    overflow: hidden;
+    & .con {
+      width: 6.9rem;
+      margin: 0 auto;
+      background: #F4FAFA;
+      border-radius: 0.16rem;
+      margin-top: 0.4rem;
+      padding: 0.4rem 0;
+      & .list_b {
+        @apply --flexCenterTopLeft;
+        padding: 0 0.4rem;
+        & img {
+          position: relative;
+          top: -0.02rem;
+          width: 0.36rem;
+          height: 0.36rem;
+          margin-right: 0.16rem;
+        }
+        & .text {
+          font-size: 0.26rem;
+          color: #262626;
+        }
+      }
+    }
+    & .intro_more {
+      font-size: 0.28rem;
+      color: #666666;
+      padding: 0.4rem;
+      & .text {
+        max-height: 0;
+        overflow: hidden;
+        line-height: 0.54rem;
+      }
+      & .more {
+        max-height: none;
+      }
+      & .btn {
+        text-align: center;
+        font-size: 0.28rem;
+        color: #9B9B9B;
+        /* padding: 0.46rem 0 0.1rem 0; */
+      }
+    }
+  }
+  & .zhuan {
+    width: 100%;
+    background: #fff;
+    padding-top: 0.5rem;
+    padding-bottom: 0.70rem;
+    & .title {
+      width: 100%;
+      text-align: center;
+      font-size: 0.34rem;
+      color: #262626;
+      margin-bottom: 0.4rem;
+      font-weight: bold;
+    }
+    & .list {
+      width: 6.9rem;
+      /* height: 3.5rem; */
+      /* background: #FAFAFA; */
+      border: 1px solid #E5E5E5;
+      border-radius: 0.16rem;
+      margin: 0 auto;
+      margin-bottom: 0.3rem;
+      & .con {
+        padding: 0.4rem 0.3rem;
+        @apply --flexJustifyTop;
+        & .left {
+          width: 3.6rem;
+          /* width: 100%; */
+          /* height: 2.4rem; */
+          & .t {
+            width: 100%;
+            height: 0.84rem;
+            line-height: 0.44rem;
+            overflow: hidden;
+            margin-bottom: 0.16rem;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:2;
+            font-weight: bold;
+            color: #365899;
+          }
+          & .s {
+            font-size: 0.26rem;
+            color: #365899;
+            margin-bottom: 0.16rem;
+            font-weight: bold;
+          }
+          & .b {
+            @apply --flexCenterTopLeft;
+            margin-top: 0.16rem;
+            height: 0.36rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            & img {
+              width: 0.32rem;
+              /* height: 0.32rem; */
+              margin-right: 0.16rem;
+              position: relative;
+              top: 0.02rem;
+            }
+            & span {
+              font-size: 0.26rem;
+              color: #999999;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+        & .right {
+          /* display: none; */
+          width: 2.4rem;
+          height: 2.4rem;
+          text-align: center;
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+.line_gray {
+  width: 100%;
+  height: 0.2rem;
+  background: #F2F2F2;
+}

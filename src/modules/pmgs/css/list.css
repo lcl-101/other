@@ -1,0 +1,162 @@
+:root {
+  --flexCenter: {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  --flexJustify: {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  --flexLeft: {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  --flexColumn {
+    flex-direction: column
+  }
+  --flexCenterTopLeft: {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  --flexJustifyTop: {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+#list {
+  width: 100%;
+  background: #f6f5f6;
+  overflow: hidden;
+  & .total {
+    padding: 0.2rem 0.3rem;
+    font-size: 0.26rem;
+    color: #888888;
+    & span {
+      color: #000000;
+    }
+  }
+  & .list {
+    width: 7.26rem;
+    height: 2.88rem;
+    background: #FFFFFF;
+    border-radius: 0.24rem;
+    margin: 0 auto;
+    margin-bottom: 0.24rem;
+    overflow: hidden;
+    & .inner {
+      width: 6.78rem;
+      margin: 0 auto;
+      margin-top: 0.24rem;
+      @apply --flexJustifyTop;
+      & .img_box {
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 0;
+        border-radius: 0.18rem;
+        text-align: center;
+        overflow: hidden;
+        background: #EEEEEE;
+        & img {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      & .right_box {
+        width: 4.18rem;
+        & .title {
+          width: 100%;
+          height: 0.4rem;
+          line-height: 0.4rem;
+          font-size: 0.28rem;
+          color: #262626;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        & .year {
+          height: 0.33rem;
+          line-height: 0.33rem;
+          font-size: 0.24rem;
+          color: #666666;
+          overflow: hidden;
+          margin-top: 0.12rem;
+        }
+        & .price {
+          margin-top: 0.18rem;
+          @apply --flexLeft;
+          flex-wrap: wrap;
+          & .l {
+            font-size: 0.22rem;
+            color: #9E100E;
+            margin-right: 0.12rem;
+            & i {
+              font-size: 0.26rem;
+            }
+            & span {
+              font-size: 0.30rem;
+            }
+          }
+          & .r {
+            height: 0.36rem;
+            font-size: 0.22rem;
+            color: #888888;
+            padding: 0 0.14rem;
+            background: #F8F8F8;
+            border-radius: 0.08rem;
+          }
+        }
+        & .cankao {
+          display: inline-block;
+          height: 0.36rem;
+          padding: 0 0.14rem;
+          font-size: 0.22rem;
+          color: #888888;
+          background: #F8F8F8;
+          border-radius: 0.08rem;
+          margin-top: 0.17rem;
+        }
+        & .bottom_box {
+          @apply --flexJustify;
+          margin-top: 0.12rem;
+          & .l {
+            @apply --flexCenter;
+            font-size: 0.24rem;
+            color: #666666;
+            line-height: 0.33rem;
+            & span {
+              width: 1.3rem;
+              display: inline-block;
+              height: 0.3rem;
+              line-height: 0.3rem;
+              overflow: hidden;
+            }
+          }
+          & .r {
+            flex: 1;
+            height: 0.33rem;
+            line-height: 0.33rem;
+            text-align: right;
+            font-size: 0.24rem;
+            color: #666666;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}
+.no_more {
+  font-size: 0.26rem;
+  color: #BABABA;
+  text-align: center;
+  padding-top: 0.3rem;
+  padding-bottom: 0.5rem;
+}
