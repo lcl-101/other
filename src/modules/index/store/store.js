@@ -6,7 +6,7 @@ import mutations from './mutations';
 
 
 const state = {
-  
+
 };
 
 Vue.use(vuex);

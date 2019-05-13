@@ -1,14 +1,20 @@
-const Index = () => import(/* webpackChunkName: "demo/Index" */ './containers/index.vue');
+const Home = () => import(/* webpackChunkName: "index/Home" */ './containers/home.vue');
+const Messages = () => import(/* webpackChunkName: "index/Messages" */ './containers/messages.vue');
 
 export default [
   {
     path: "/",
-    title: "index",
-    component: Index
+    title: "Home",
+    component: Home
   },
   {
-    path: "/index",
-    title: "index",
-    component: Index
+    path: "/Home",
+    title: "Home",
+    component: Home
+  },
+  {
+    path: "/Messages",
+    title: "Messages",
+    component: Messages
   }
-]
+];

@@ -1,0 +1,71 @@
+:root {
+  --flexCenter: {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  --flexJustify: {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  --flexLeft: {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  --flexColumn {
+    flex-direction: column
+  }
+  --flexCenterLeft: {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  --flexCenterTopLeft: {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  --flexJustifyTop: {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+#footer {
+  height: 1.1rem;
+  & ul {
+    position: fixed;
+    bottom: 0;
+    width: 7.5rem;
+    z-index: 10;
+    background: #fff;
+    @apply --flexJustify;
+    padding: 0.12rem 0 0.1rem 0;
+    & li {
+      flex: 2;
+      text-align: center;
+      & .img_box {
+        width: 0.48rem;
+        height: 0.48rem;
+        font-size: 0;
+        text-align: center;
+        margin: 0 auto;
+        & img {
+          width: 100%;
+        }
+      }
+      & .name {
+        font-size: 0.2rem;
+        color: #282828;
+        line-height: 0.34rem;
+        padding-top: 0.04rem;
+      }
+      & .active {
+        color: #2d99dc;
+      }
+    }
+  }
+}

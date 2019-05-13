@@ -1,0 +1,134 @@
+:root {
+  --flexCenter: {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  --flexJustify: {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  --flexLeft: {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  --flexColumn {
+    flex-direction: column
+  }
+  --flexCenterLeft: {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  --flexCenterTopLeft: {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  --flexJustifyTop: {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+#messages {
+  width: 100%;
+  & ul {
+    background: #f2f2f2;
+    & li {
+      padding: 0 0.24rem;
+      overflow: hidden;
+      background: #fff;
+      border-bottom: 1px solid #e6e6e6;
+      margin-bottom: 0.1rem;
+      & .top_box {
+        width: 100%;
+        height: 0.78rem;
+        @apply --flexLeft;
+        margin-top: 0.16rem;
+        & .logo_box {
+          width: 0.78rem;
+          height: 0.78rem;
+          text-align: center;
+          line-height: 0.78rem;
+          font-size: 0;
+          border-radius: 100%;
+          overflow: hidden;
+          & img {
+            display: inline-block;
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+        & .info_box {
+          @apply --flexCenterLeft;
+          flex-direction: column;
+          margin-left: 0.2rem;
+          & .title {
+            font-size: 0.3rem;
+            line-height: 0.4rem;
+          }
+          & .time{
+            font-size: 0.24rem;
+            line-height: 0.3rem;
+            color: #777777;
+            margin-top: 0.02rem;
+          }
+        }
+        & .reply_box {
+          flex: 1;
+          height: 0.4rem;
+          & .reply_btn {
+            float: right;
+            width: 0.9rem;
+            height: 0.4rem;
+            line-height: 0.4rem;
+            text-align: center;
+            border: 1px solid #333333;
+            font-size: 0.24rem;
+            color: #000000;
+            border-radius: 0.1rem;
+          }
+        }
+      }
+      & .inner {
+        width: 100%;
+        height: 1.44rem;
+        line-height: 0.48rem;
+        font-size: 0.32rem;
+        color: #000000;
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-top: 0.2rem;
+        text-align: justify;
+      }
+      & .reply_con {
+        padding: 0.16rem 0.22rem;
+        font-size: 0.26rem;
+        color: #666666;
+        background: #e6e6e6;
+        margin-top: 0.12rem;
+        margin-bottom: 0.16rem;
+        & span {
+          height: 0.74rem;
+          overflow: hidden;
+          display: block;
+          text-overflow: -o-ellipsis-lastline;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+      }
+    }
+  }
+}
