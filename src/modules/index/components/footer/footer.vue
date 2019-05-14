@@ -18,20 +18,20 @@
         </router-link>
       </li>
       <li>
-        <a href="#">
+        <router-link to="/Find">
           <div class="img_box">
             <img src="../../images/icon/footer_found.png" alt="">
           </div>
           <div class="name">发现</div>
-        </a>
+        </router-link>
       </li>
       <li>
-        <a href="#">
+        <router-link to="/Personal">
           <div class="img_box">
             <img src="../../images/icon/footer_person.png" alt="">
           </div>
           <div class="name">我的</div>
-        </a>
+        </router-link>
       </li>
     </ul>
   </div>
