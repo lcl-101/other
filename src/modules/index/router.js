@@ -2,6 +2,7 @@ const Home = () => import(/* webpackChunkName: "index/Home" */ './containers/hom
 const Messages = () => import(/* webpackChunkName: "index/Messages" */ './containers/messages.vue');
 const Find = () => import(/* webpackChunkName: "index/Find" */ './containers/find.vue');
 const Personal = () => import(/* webpackChunkName: "index/Personal" */ './containers/personal.vue');
+const Detail = () => import(/* webpackChunkName: "index/Detail" */ './containers/detail.vue');
 
 export default [
   {
@@ -28,5 +29,10 @@ export default [
     path: "/Personal",
     title: "Personal",
     component: Personal
+  },
+  {
+    path: "/Detail",
+    title: "Detail",
+    component: Detail
   }
 ];

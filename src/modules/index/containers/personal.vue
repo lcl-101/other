@@ -38,8 +38,51 @@
       </div>
       <img src="../images/personal/me.png" alt="">
     </div>
-    <div class="">
-
+    <div class="personal_info">
+      <ul>
+        <li class="clearfix">
+          <div class="f_left">性别</div>
+          <div class="f_right">
+            <span>男</span>
+            <img src="../images/icon/right.png" alt="">
+          </div>
+        </li>
+        <li class="clearfix">
+          <div class="f_left">年龄</div>
+          <div class="f_right">
+            <span>23岁</span>
+            <img src="../images/icon/right.png" alt="">
+          </div>
+        </li>
+        <li class="clearfix">
+          <div class="f_left">矫正时间</div>
+          <div class="f_right">
+            <span>矫正完毕</span>
+            <img src="../images/icon/right.png" alt="">
+          </div>
+        </li>
+        <li class="clearfix">
+          <div class="f_left">牙套类型</div>
+          <div class="f_right">
+            <span>隐适美</span>
+            <img src="../images/icon/right.png" alt="">
+          </div>
+        </li>
+        <li class="clearfix">
+          <div class="f_left">牙齿问题</div>
+          <div class="f_right">
+            <span>牙齿不齐、龅牙</span>
+            <img src="../images/icon/right.png" alt="">
+          </div>
+        </li>
+        <li class="clearfix">
+          <div class="f_left">日记简介</div>
+          <div class="f_right">
+            <textarea name="date" placeholder="16~48个字内"></textarea>
+            <img src="../images/icon/right.png" alt="">
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </template>

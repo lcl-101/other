@@ -16,29 +16,31 @@
     <div class="list_box">
       <ul>
         <li>
-          <div class="top_box">
-            <div class="logo_box">
-              <img src="http://lichenglong.pw/img/lcl.jpg" alt="">
+          <router-link to="/Detail">
+            <div class="top_box">
+              <div class="logo_box">
+                <img src="http://lichenglong.pw/img/lcl.jpg" alt="">
+              </div>
+              <div class="info_box">
+                <div class="title">劲小松</div>
+                <div class="time">更新时间：2018年6月26日</div>
+              </div>
             </div>
-            <div class="info_box">
-              <div class="title">劲小松</div>
-              <div class="time">更新时间：2018年6月26日</div>
+            <div class="inner">10月有矫正牙齿的想法，与老公商量后决定实行！想彻底整顿一下自己的口腔问题想彻底整顿一下自己的口腔问题</div>
+            <div class="label_inner">
+              <span class="bg_r">男</span>
+              <span class="bg_y">23岁</span>
+              <span class="bg_g">隐适美</span>
+              <span class="bg_o">地包天</span>
+              <span class="bg_b">牙齿突出</span>
+              <span class="bg_gray">矫正完毕</span>
             </div>
-          </div>
-          <div class="inner">10月有矫正牙齿的想法，与老公商量后决定实行！想彻底整顿一下自己的口腔问题想彻底整顿一下自己的口腔问题</div>
-          <div class="label_inner">
-            <span class="bg_r">男</span>
-            <span class="bg_y">23岁</span>
-            <span class="bg_g">隐适美</span>
-            <span class="bg_o">地包天</span>
-            <span class="bg_b">牙齿突出</span>
-            <span class="bg_gray">矫正完毕</span>
-          </div>
-          <div class="img_box">
-            <div class="list"><img src="http://lichenglong.pw/img/lcl.jpg" alt=""></div>
-            <div class="list"><img src="http://lichenglong.pw/img/lcl.jpg" alt=""></div>
-            <div class="list"><img src="http://lichenglong.pw/img/lcl.jpg" alt=""></div>
-          </div>
+            <div class="img_box">
+              <div class="list"><img src="http://lichenglong.pw/img/lcl.jpg" alt=""></div>
+              <div class="list"><img src="http://lichenglong.pw/img/lcl.jpg" alt=""></div>
+              <div class="list"><img src="http://lichenglong.pw/img/lcl.jpg" alt=""></div>
+            </div>
+          </router-link>
           <div class="icon_box">
             <div class="i_inner">
               <img src="../images/icon/share.png" alt="">
